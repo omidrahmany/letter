@@ -14,7 +14,11 @@ public interface SubmitLetterByOfficialEmployeeUseCase {
             throws SubmitLetterByOfficialEmployeeUseFailedException;
 
     class SubmitLetterByOfficialEmployeeUseFailedException extends Exception {
+        private String message;
 
+        public SubmitLetterByOfficialEmployeeUseFailedException(String message) {
+            this.message = message;
+        }
     }
 
 }
